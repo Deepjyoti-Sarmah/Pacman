@@ -308,12 +308,12 @@ public class Model extends JPanel implements ActionListener {
 
                 g2d.setColor(new Color(0,72,251));
                 g2d.setStroke(new BasicStroke(5));
-                
-                if ((levelData[i] == 0)) { 
+
+                if ((levelData[i] == 0)) {
                 	g2d.fillRect(x, y, BLOCK_SIZE, BLOCK_SIZE);
                  }
 
-                if ((screenData[i] & 1) != 0) { 
+                if ((screenData[i] & 1) != 0) {
                     g2d.drawLine(x, y, x, y + BLOCK_SIZE - 1);
                 }
 
@@ -321,17 +321,17 @@ public class Model extends JPanel implements ActionListener {
                     g2d.drawLine(x, y, x + BLOCK_SIZE - 1, y);
                 }
 
-                if ((screenData[i] & 4) != 0) { 
+                if ((screenData[i] & 4) != 0) {
                     g2d.drawLine(x + BLOCK_SIZE - 1, y, x + BLOCK_SIZE - 1,
                             y + BLOCK_SIZE - 1);
                 }
 
-                if ((screenData[i] & 8) != 0) { 
+                if ((screenData[i] & 8) != 0) {
                     g2d.drawLine(x, y + BLOCK_SIZE - 1, x + BLOCK_SIZE - 1,
                             y + BLOCK_SIZE - 1);
                 }
 
-                if ((screenData[i] & 16) != 0) { 
+                if ((screenData[i] & 16) != 0) {
                     g2d.setColor(new Color(255,255,255));
                     g2d.fillOval(x + 10, y + 10, 6, 6);
                }
@@ -390,7 +390,6 @@ public class Model extends JPanel implements ActionListener {
         dying = false;
     }
 
- 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
@@ -436,7 +435,7 @@ public class Model extends JPanel implements ActionListener {
                     req_dy = 1;
                 } else if (key == KeyEvent.VK_ESCAPE && timer.isRunning()) {
                     inGame = false;
-                } 
+                }
             } else {
                 if (key == KeyEvent.VK_SPACE) {
                     inGame = true;
@@ -451,8 +450,4 @@ public class Model extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		   repaint();
 	}
-	
-	
-	
-
 }
